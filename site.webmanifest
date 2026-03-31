@@ -1,0 +1,13 @@
+{
+  "name": "Henoq",
+  "short_name": "Henoq",
+  "description": "IT, Cloud & Cybersécurité pour TPE/PME en Île-de-France",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#F6F4F1",
+  "theme_color": "#593137",
+  "icons": [
+    { "src": "assets/favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

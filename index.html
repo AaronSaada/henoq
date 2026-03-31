@@ -1,3 +1,581 @@
-<p>Test</p>
-<p>Allez</p>
-<h1>ALLEZ</h1>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ── SEO ── -->
+  <title>Henoq — IT, Cloud & Cybersécurité pour TPE/PME en Île-de-France</title>
+  <meta name="description" content="Henoq accompagne les TPE et PME d'Île-de-France : audit IT gratuit, cloud Microsoft 365 & Azure, cybersécurité, infogérance. Réactif, humain, sans jargon.">
+  <meta name="author" content="Henoq">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://henoq.fr/">
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://henoq.fr/">
+  <meta property="og:title"       content="Henoq — IT, Cloud & Cybersécurité pour TPE/PME">
+  <meta property="og:description" content="Audit gratuit, cloud Microsoft, cybersécurité et infogérance pour les TPE/PME d'Île-de-France.">
+  <meta property="og:image"       content="https://henoq.fr/assets/og-image.jpg">
+  <meta property="og:locale"      content="fr_FR">
+  <meta property="og:site_name"   content="Henoq">
+
+  <!-- ── Twitter Card ── -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Henoq — IT, Cloud & Cybersécurité pour TPE/PME">
+  <meta name="twitter:description" content="Audit gratuit, cloud Microsoft, cybersécurité et infogérance pour les TPE/PME d'Île-de-France.">
+  <meta name="twitter:image"       content="https://henoq.fr/assets/og-image.jpg">
+
+  <!-- ── Sécurité ── -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options"        content="SAMEORIGIN">
+  <meta http-equiv="Referrer-Policy"        content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy"     content="camera=(), microphone=(), geolocation=()">
+
+  <!-- ── Favicons ── -->
+  <link rel="icon"             type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon"             type="image/png"     href="assets/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon"                      href="assets/apple-touch-icon.png">
+  <link rel="manifest"                              href="site.webmanifest">
+  <meta name="theme-color" content="#593137">
+
+  <!-- ── Polices ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+  <!-- ── CSS ── -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/index.css">
+
+  <!-- ── Schema.org ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Henoq",
+    "description": "Conseil IT, cloud Microsoft et cybersécurité pour TPE/PME en Île-de-France.",
+    "url": "https://henoq.fr",
+    "areaServed": { "@type": "State", "name": "Île-de-France" },
+    "serviceType": ["Cybersécurité", "Cloud Computing", "Infogérance", "Audit informatique"],
+    "priceRange": "€€",
+    "address": { "@type": "PostalAddress", "addressRegion": "Île-de-France", "addressCountry": "FR" }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ══════════════════════════
+       NAVIGATION
+  ══════════════════════════ -->
+  <nav id="nav" role="navigation" aria-label="Navigation principale">
+    <a href="index.html" class="nav-brand" aria-label="Henoq — accueil">
+      <img src="assets/images/logo.svg" alt="Henoq" class="nav-logo-img"
+           onerror="this.src='assets/images/logo.png'" />
+      <span class="nav-wordmark">HENOQ</span>
+    </a>
+    <button id="burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="nav-menu" role="list">
+
+      <li class="nav-item nav-item--dropdown">
+        <button class="nav-dropdown-trigger" aria-expanded="false">
+          Nos services
+          <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <ul class="nav-dropdown" role="list">
+          <li><a href="cybersecurite.html">
+            <span class="nav-drop-title">Cybersécurité</span>
+            <span class="nav-drop-sub">Protection & conformité</span>
+          </a></li>
+          <li><a href="dsi-externalisee.html">
+            <span class="nav-drop-title">DSI externalisée</span>
+            <span class="nav-drop-sub">Votre DSI sans les coûts</span>
+          </a></li>
+          <li><a href="conseil-formation.html">
+            <span class="nav-drop-title">Conseil & Formation</span>
+            <span class="nav-drop-sub">Stratégie IT & montée en compétences</span>
+          </a></li>
+          <li><a href="infogerance.html">
+            <span class="nav-drop-title">Infogérance</span>
+            <span class="nav-drop-sub">Gestion complète de votre IT</span>
+          </a></li>
+        </ul>
+      </li>
+
+      <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li>
+        <a href="contact.html" class="nav-cta">
+          Audit gratuit
+          <span class="nav-cta-badge">Offre jusqu'au 31 déc. 2026</span>
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ══════════════════════════
+         HERO
+    ══════════════════════════ -->
+    <section id="hero" aria-labelledby="hero-title">
+
+      <!-- Typo décorative fond -->
+      <div class="hero-bg-text" aria-hidden="true">
+        <div class="hero-bg-track">
+          <span class="hero-bg-word hero-bg-word--maroon">HENOQ</span>
+          <span class="hero-bg-word hero-bg-word--dark">HENOQ</span>
+          <span class="hero-bg-word hero-bg-word--maroon">HENOQ</span>
+          <span class="hero-bg-word hero-bg-word--dark">HENOQ</span>
+          <span class="hero-bg-word hero-bg-word--maroon">HENOQ</span>
+          <span class="hero-bg-word hero-bg-word--dark">HENOQ</span>
+          <span class="hero-bg-word hero-bg-word--maroon">HENOQ</span>
+          <span class="hero-bg-word hero-bg-word--dark">HENOQ</span>
+          <!-- Doublon pour loop parfait -->
+          <span class="hero-bg-word hero-bg-word--maroon">HENOQ</span>
+          <span class="hero-bg-word hero-bg-word--dark">HENOQ</span>
+          <span class="hero-bg-word hero-bg-word--maroon">HENOQ</span>
+          <span class="hero-bg-word hero-bg-word--dark">HENOQ</span>
+          <span class="hero-bg-word hero-bg-word--maroon">HENOQ</span>
+          <span class="hero-bg-word hero-bg-word--dark">HENOQ</span>
+          <span class="hero-bg-word hero-bg-word--maroon">HENOQ</span>
+          <span class="hero-bg-word hero-bg-word--dark">HENOQ</span>
+        </div>
+      </div>
+
+      <div class="hero-content">
+
+        <h1 id="hero-title">
+          <span class="lw"><em class="l" style="--d:.3s">POUR VOTRE IT,</em></span>
+          <span class="lw"><em class="l" style="--d:.55s">EXIGEZ</em></span>
+          <span class="hero-elevator-wrap" style="opacity:0;animation:fadeUp .65s cubic-bezier(.22,1,.36,1) .8s both">
+            <span class="hero-elevator" id="hero-elevator" aria-live="polite">
+              <span class="hero-elevator-item">LA SÉCURITÉ.</span>
+              <span class="hero-elevator-item">LA SÉRÉNITÉ.</span>
+              <span class="hero-elevator-item">L'EXCELLENCE.</span>
+              <span class="hero-elevator-item">LA TRANSPARENCE.</span>
+            </span>
+          </span>
+        </h1>
+
+        <p class="hero-sub" style="--d:1.1s">
+          Henoq accompagne les TPE et PME d'Île-de-France dans leur quotidien IT —
+          de l'audit à l'infogérance, sans jargon et avec réactivité.
+        </p>
+
+        <div class="hero-btns" style="--d:1.05s">
+          <a href="audit.html" class="btn-fill">AUDIT GRATUIT</a>
+          <a href="offres.html" class="btn-text">Découvrir nos offres →</a>
+        </div>
+
+      </div>
+
+      <!-- Chiffres clés bas du hero -->
+      <div class="hero-stats" aria-label="Chiffres clés">
+        <div class="hero-stat">
+          <p class="hero-stat-num">20-40%</p>
+          <p class="hero-stat-label">D'économies sur vos licences et outils IT</p>
+        </div>
+        <div class="hero-stat">
+          <p class="hero-stat-num">0€</p>
+          <p class="hero-stat-label">Pour commencer — audit offert, sans engagement</p>
+        </div>
+        <div class="hero-stat">
+          <p class="hero-stat-num">48h</p>
+          <p class="hero-stat-label">Délai d'intervention garanti, sans hotline offshore</p>
+        </div>
+        <div class="hero-stat">
+          <p class="hero-stat-num">10 ans</p>
+          <p class="hero-stat-label">D'expérience Microsoft, cloud & cybersécurité</p>
+        </div>
+      </div>
+
+      <!-- Ticker bas de section -->
+      <div class="hero-ticker" aria-hidden="true">
+        <div class="hero-ticker-track" id="ticker-track">
+          <span class="hero-ticker-item">Offre d'ouverture — Jusqu'au 31 décembre 2026, profitez d'un audit offert sans engagement</span><span class="hero-ticker-sep">·</span>
+          <span class="hero-ticker-item">Offre d'ouverture — Jusqu'au 31 décembre 2026, profitez d'un audit offert sans engagement</span><span class="hero-ticker-sep">·</span>
+          <span class="hero-ticker-item">Offre d'ouverture — Jusqu'au 31 décembre 2026, profitez d'un audit offert sans engagement</span><span class="hero-ticker-sep">·</span>
+          <span class="hero-ticker-item">Offre d'ouverture — Jusqu'au 31 décembre 2026, profitez d'un audit offert sans engagement</span><span class="hero-ticker-sep">·</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ══════════════════════════
+         POURQUOI HENOQ
+    ══════════════════════════ -->
+    <section id="why" aria-labelledby="why-title">
+      <div class="wrap">
+        <p class="sec-eyebrow light reveal">Pourquoi Henoq</p>
+        <h2 id="why-title" class="sec-title light reveal reveal-d1">
+          <span class="lw">UNE IT FIABLE,</span>
+          <span class="lw outline light">SANS FRICTION.</span>
+        </h2>
+        <div class="why-grid">
+
+          <article class="why-item reveal">
+            <p class="why-num" aria-hidden="true"><span class="lw"><span class="why-num-inner">01</span></span></p>
+            <h3>
+              <span class="lw">RÉACTIVITÉ</span>
+              <span class="lw outline light">RÉELLE.</span>
+            </h3>
+            <p>Pas de hotline offshore. Un interlocuteur identifié, joignable, qui connaît votre environnement. Les problèmes se règlent en heures, pas en jours.</p>
+            <span class="why-tag">Intervention &lt; 48h →</span>
+          </article>
+
+          <article class="why-item reveal reveal-d1">
+            <p class="why-num" aria-hidden="true"><span class="lw"><span class="why-num-inner">02</span></span></p>
+            <h3>
+              <span class="lw">EXPERTISE</span>
+              <span class="lw outline light">MICROSOFT.</span>
+            </h3>
+            <p>10 ans sur Azure, M365, Intune et Defender. Nous exploitons ce que vous payez déjà — et éliminons ce qui est inutile.</p>
+            <span class="why-tag">Azure · M365 · Intune →</span>
+          </article>
+
+          <article class="why-item reveal reveal-d2">
+            <p class="why-num" aria-hidden="true"><span class="lw"><span class="why-num-inner">03</span></span></p>
+            <h3>
+              <span class="lw">PRIX</span>
+              <span class="lw outline light">FIXES.</span>
+            </h3>
+            <p>Forfaits clairs, sans surprise. Vous savez ce que vous payez avant de signer. Pas de régie, pas d'heures cachées.</p>
+            <span class="why-tag">Voir nos forfaits →</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════
+         CE QU'ON FAIT BIEN
+    ══════════════════════════ -->
+    <section id="offers" aria-labelledby="offers-title">
+      <div class="wrap">
+        <div class="svc-header">
+          <p class="sec-eyebrow reveal">Nos services</p>
+          <h2 id="offers-title" class="sec-title reveal reveal-d1">
+            <span class="lw">CE QU'ON</span>
+            <span class="lw outline">FAIT BIEN.</span>
+          </h2>
+        </div>
+        <div class="svc-list">
+
+          <div class="svc-item reveal" data-bg="#593137" data-accent="#F3EDDA">
+            <a href="offres.html#cloud" class="svc-link" aria-label="Cloud & Outils Collaboratifs"></a>
+            <div class="svc-body">
+              <h3 class="svc-title">Cloud<br><span class="svc-title-outline">&amp; Outils Collaboratifs</span></h3>
+              <p class="svc-hook">Travaillez de partout.<br>Sans friction, sans perte.</p>
+              <ul class="svc-tags">
+                <li>Microsoft 365</li><li>Google Workspace</li><li>Sauvegarde cloud</li><li>Gestion des accès</li><li>Migration</li>
+              </ul>
+            </div>
+            <div class="svc-carousel-wrap">
+              <div class="svc-carousel">
+                <div class="svc-carousel-track">
+                  <img src="assets/images/logo-microsoft-365.png" alt="Microsoft 365">
+                  <img src="assets/images/logo-google-workspace.png" alt="Google Workspace">
+                  <img src="assets/images/logo-onedrive.png" alt="OneDrive">
+                  <img src="assets/images/logo-synology.png" alt="Synology">
+                  <img src="assets/images/logo-microsoft-365.png" alt="Microsoft 365">
+                  <img src="assets/images/logo-google-workspace.png" alt="Google Workspace">
+                  <img src="assets/images/logo-onedrive.png" alt="OneDrive">
+                  <img src="assets/images/logo-synology.png" alt="Synology">
+                </div>
+              </div>
+            </div>
+            <div class="svc-mobile-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <a href="offres.html#cloud" class="svc-arrow-link" aria-label="Voir la page">↗</a>
+            <div class="svc-arrow">↗</div>
+          </div>
+
+          <div class="svc-item reveal reveal-d1" data-bg="#1a1a1a" data-accent="#F3EDDA">
+            <a href="offres.html#support" class="svc-link" aria-label="Support & Maintenance"></a>
+            <div class="svc-body">
+              <h3 class="svc-title">Support<br><span class="svc-title-outline">&amp; Maintenance</span></h3>
+              <p class="svc-hook">Réactif avant que vous<br>ne le demandiez.</p>
+              <ul class="svc-tags">
+                <li>Assistance sur site &amp; à distance</li><li>Gestion de parc</li><li>Dépannage</li><li>Mises à jour</li>
+              </ul>
+            </div>
+            <div class="svc-carousel-wrap">
+              <div class="svc-carousel">
+                <div class="svc-carousel-track">
+                  <img src="assets/images/logo-team-viewer.png" alt="TeamViewer">
+                  <img src="assets/images/logo-intune.png" alt="InTune">
+                  <img src="assets/images/logo-windows-11.png" alt="Windows 11">
+                  <img src="assets/images/logo-mac-os.png" alt="macOS">
+                  <img src="assets/images/logo-team-viewer.png" alt="TeamViewer">
+                  <img src="assets/images/logo-intune.png" alt="InTune">
+                  <img src="assets/images/logo-windows-11.png" alt="Windows 11">
+                  <img src="assets/images/logo-mac-os.png" alt="macOS">
+                </div>
+              </div>
+            </div>
+            <div class="svc-mobile-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <a href="offres.html#support" class="svc-arrow-link" aria-label="Voir la page">↗</a>
+            <div class="svc-arrow">↗</div>
+          </div>
+
+          <div class="svc-item reveal reveal-d2" data-bg="#593137" data-accent="#F3EDDA">
+            <a href="cybersecurite.html" class="svc-link" aria-label="Cybersécurité & Conformité"></a>
+            <div class="svc-body">
+              <h3 class="svc-title">Cybersécurité<br><span class="svc-title-outline">&amp; Conformité</span></h3>
+              <p class="svc-hook">Protégez ce que vous<br>avez mis des années à bâtir.</p>
+              <ul class="svc-tags">
+                <li>Audit sécurité</li><li>EDR / Firewall</li><li>ISO 27001</li><li>PRA / PCA</li><li>Sensibilisation</li>
+              </ul>
+            </div>
+            <div class="svc-carousel-wrap">
+              <div class="svc-carousel">
+                <div class="svc-carousel-track">
+                  <img src="assets/images/logo-fortinet.png" alt="Fortinet">
+                  <img src="assets/images/logo-sonicwall.png" alt="SonicWall">
+                  <img src="assets/images/logo-google-authenticator.png" alt="Google Authenticator">
+                  <img src="assets/images/logo-microsoft-authenticator.png" alt="Microsoft Authenticator">
+                  <img src="assets/images/logo-iso.png" alt="ISO 27001">
+                  <img src="assets/images/logo-pra-pca.png" alt="PRA/PCA">
+                  <img src="assets/images/logo-fortinet.png" alt="Fortinet">
+                  <img src="assets/images/logo-sonicwall.png" alt="SonicWall">
+                  <img src="assets/images/logo-google-authenticator.png" alt="Google Authenticator">
+                  <img src="assets/images/logo-microsoft-authenticator.png" alt="Microsoft Authenticator">
+                  <img src="assets/images/logo-iso.png" alt="ISO 27001">
+                  <img src="assets/images/logo-pra-pca.png" alt="PRA/PCA">
+                </div>
+              </div>
+            </div>
+            <div class="svc-mobile-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <a href="cybersecurite.html" class="svc-arrow-link" aria-label="Voir la page">↗</a>
+            <div class="svc-arrow">↗</div>
+          </div>
+
+          <div class="svc-item reveal reveal-d1" data-bg="#1a1a1a" data-accent="#F3EDDA">
+            <a href="offres.html#infrastructure" class="svc-link" aria-label="Infrastructure & Réseaux"></a>
+            <div class="svc-body">
+              <h3 class="svc-title">Infrastructure<br><span class="svc-title-outline">&amp; Réseaux</span></h3>
+              <p class="svc-hook">Des fondations solides<br>pour tout ce qui vient ensuite.</p>
+              <ul class="svc-tags">
+                <li>Wi-Fi &amp; câblage</li><li>Virtualisation</li><li>Hyper-V / VMware</li><li>Supervision GLPI</li>
+              </ul>
+            </div>
+            <div class="svc-carousel-wrap">
+              <div class="svc-carousel">
+                <div class="svc-carousel-track">
+                  <img src="assets/images/logo-ubiquiti.png" alt="Ubiquiti">
+                  <img src="assets/images/logo-vmware.png" alt="VMware">
+                  <img src="assets/images/logo-glpi.png" alt="GLPI">
+                  <img src="assets/images/logo-synology.png" alt="Synology">
+                  <img src="assets/images/logo-windows-11.png" alt="Windows 11">
+                  <img src="assets/images/logo-ubiquiti.png" alt="Ubiquiti">
+                  <img src="assets/images/logo-vmware.png" alt="VMware">
+                  <img src="assets/images/logo-glpi.png" alt="GLPI">
+                  <img src="assets/images/logo-synology.png" alt="Synology">
+                  <img src="assets/images/logo-windows-11.png" alt="Windows 11">
+                </div>
+              </div>
+            </div>
+            <div class="svc-mobile-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <a href="offres.html#infrastructure" class="svc-arrow-link" aria-label="Voir la page">↗</a>
+            <div class="svc-arrow">↗</div>
+          </div>
+
+          <div class="svc-item reveal reveal-d2" data-bg="#593137" data-accent="#F3EDDA">
+            <a href="dsi-externalisee.html" class="svc-link" aria-label="Conseil & Pilotage IT"></a>
+            <div class="svc-body">
+              <h3 class="svc-title">Conseil<br><span class="svc-title-outline">&amp; Pilotage IT</span></h3>
+              <p class="svc-hook">Votre DSI externalisé.<br>Sans les coûts d'un DSI.</p>
+              <ul class="svc-tags">
+                <li>Stratégie IT</li><li>Choix des outils</li><li>Gestion de projets</li><li>Formation</li><li>Documentation</li>
+              </ul>
+            </div>
+            <div class="svc-carousel-wrap">
+              <div class="svc-carousel">
+                <div class="svc-carousel-track">
+                  <img src="assets/images/logo-microsoft-365.png" alt="Microsoft 365">
+                  <img src="assets/images/logo-google-workspace.png" alt="Google Workspace">
+                  <img src="assets/images/logo-intune.png" alt="InTune">
+                  <img src="assets/images/logo-glpi.png" alt="GLPI">
+                  <img src="assets/images/logo-iso.png" alt="ISO 27001">
+                  <img src="assets/images/logo-pra-pca.png" alt="PRA/PCA">
+                  <img src="assets/images/logo-microsoft-365.png" alt="Microsoft 365">
+                  <img src="assets/images/logo-google-workspace.png" alt="Google Workspace">
+                  <img src="assets/images/logo-intune.png" alt="InTune">
+                  <img src="assets/images/logo-glpi.png" alt="GLPI">
+                  <img src="assets/images/logo-iso.png" alt="ISO 27001">
+                  <img src="assets/images/logo-pra-pca.png" alt="PRA/PCA">
+                </div>
+              </div>
+            </div>
+            <div class="svc-mobile-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <a href="dsi-externalisee.html" class="svc-arrow-link" aria-label="Voir la page">↗</a>
+            <div class="svc-arrow">↗</div>
+          </div>
+
+          <div class="svc-item reveal reveal-d3" data-bg="#1a1a1a" data-accent="#F3EDDA">
+            <a href="offres.html#seo" class="svc-link" aria-label="SEO & Référencement"></a>
+            <div class="svc-body">
+              <h3 class="svc-title">SEO<br><span class="svc-title-outline">&amp; Référencement</span></h3>
+              <p class="svc-hook">Soyez trouvés avant<br>vos concurrents.</p>
+              <ul class="svc-tags">
+                <li>Audit SEO</li><li>Référencement naturel</li><li>Stratégie de contenu</li><li>Performance web</li>
+              </ul>
+            </div>
+            <div class="svc-carousel-wrap">
+              <div class="svc-carousel">
+                <div class="svc-carousel-track">
+                  <img src="assets/images/logo-google-workspace.png" alt="Google">
+                  <img src="assets/images/logo-google-authenticator.png" alt="Google Search">
+                  <img src="assets/images/logo-google-workspace.png" alt="Google">
+                  <img src="assets/images/logo-google-authenticator.png" alt="Google Search">
+                </div>
+              </div>
+            </div>
+            <div class="svc-mobile-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <a href="offres.html#seo" class="svc-arrow-link" aria-label="Voir la page">↗</a>
+            <div class="svc-arrow">↗</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════
+         CHIFFRES CLÉS
+    ══════════════════════════ -->
+    <section id="stats" aria-label="Chiffres clés">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <p class="stat-num"><span class="cnt" data-to="10">0</span>+</p>
+          <p class="stat-label">Ans d'expérience</p>
+        </div>
+        <div class="stat-item reveal reveal-d1">
+          <p class="stat-num">48<span style="font-size:.6em;font-weight:700">h</span></p>
+          <p class="stat-label">Délai d'intervention</p>
+        </div>
+        <div class="stat-item reveal reveal-d2">
+          <p class="stat-num"><span class="cnt" data-to="40">0</span>%</p>
+          <p class="stat-label">D'économies identifiées</p>
+        </div>
+        <div class="stat-item reveal reveal-d3">
+          <p class="stat-num">3</p>
+          <p class="stat-label">Experts dédiés</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════
+         TRUST BAND
+    ══════════════════════════ -->
+    <section id="trust" aria-label="Technologies maîtrisées">
+      <div class="wrap">
+        <p class="trust-label reveal">Technologies maîtrisées</p>
+        <div class="trust-logos reveal reveal-d1" role="list">
+          <span class="trust-tag" role="listitem">Microsoft 365</span>
+          <span class="trust-tag" role="listitem">Azure</span>
+          <span class="trust-tag" role="listitem">Intune</span>
+          <span class="trust-tag" role="listitem">Defender</span>
+          <span class="trust-tag" role="listitem">VMware</span>
+          <span class="trust-tag" role="listitem">Debian</span>
+          <span class="trust-tag" role="listitem">GLPI</span>
+          <span class="trust-tag" role="listitem">n8n</span>
+          <span class="trust-tag" role="listitem">SharePoint</span>
+          <span class="trust-tag" role="listitem">Entra ID</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════
+         CTA FINAL
+    ══════════════════════════ -->
+    <section id="cta-final" aria-labelledby="cta-title">
+      <div class="wrap">
+        <p class="sec-eyebrow light reveal">On commence ?</p>
+        <h2 id="cta-title" class="sec-title light reveal reveal-d1">
+          <span class="lw">VOTRE AUDIT</span>
+          <span class="lw outline light">VOUS ATTEND.</span>
+        </h2>
+        <p class="reveal reveal-d2">Un diagnostic complet de votre infrastructure, sans engagement. En 1h, vous avez une vision claire de vos forces, vos risques et vos priorités.</p>
+        <div class="cta-btns reveal reveal-d3">
+          <a href="audit.html" class="btn-fill light">DEMANDER MON AUDIT</a>
+          <a href="contact.html" class="btn-text" style="color:rgba(246,244,241,.6)">Nous contacter →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════
+       FOOTER
+  ══════════════════════════ -->
+  <footer id="footer" role="contentinfo">
+    <div class="wrap">
+      <div class="footer-inner">
+
+        <div class="footer-brand reveal">
+          <a href="index.html" class="nav-brand" aria-label="Henoq — accueil">
+            <img src="assets/images/logo.svg" alt="Henoq" class="nav-logo-img"
+                 onerror="this.src='assets/images/logo.png'" />
+            <span class="nav-wordmark">HENOQ</span>
+          </a>
+          <p class="footer-tagline">IT, cloud et cybersécurité pour les TPE/PME d'Île-de-France. Réactif, humain, sans jargon.</p>
+        </div>
+
+        <nav aria-label="Navigation secondaire" class="reveal reveal-d1">
+          <p class="footer-col-title">Navigation</p>
+          <ul class="footer-links" role="list">
+            <li><a href="offres.html">Nos offres</a></li>
+            <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-label="Nos offres" class="reveal reveal-d2">
+          <p class="footer-col-title">Offres</p>
+          <ul class="footer-links" role="list">
+            <li><a href="offres.html#audit">Audit IT</a></li>
+            <li><a href="offres.html#cybersecurite">Cybersécurité</a></li>
+            <li><a href="offres.html#cloud-ready">Cloud Ready</a></li>
+            <li><a href="offres.html#infogerance">Infogérance</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <p class="footer-col-title">Contact</p>
+          <p class="footer-contact-item"><a href="mailto:contact@henoq.fr">contact@henoq.fr</a></p>
+          <p class="footer-contact-item">Île-de-France</p>
+          <p class="footer-contact-item" style="margin-top:1rem">
+            <a href="https://www.linkedin.com/company/henoq" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© <span id="yr"></span> Henoq — Tous droits réservés</p>
+        <nav aria-label="Mentions légales">
+          <ul class="footer-legal" role="list">
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="confidentialite.html">Confidentialité</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button id="btt" aria-label="Retour en haut">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ── JS ── -->
+  <script src="js/nav.js"></script>
+  <script src="js/index.js"></script>
+
+</body>
+</html>

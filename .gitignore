@@ -1,0 +1,15 @@
+# Système
+.DS_Store
+Thumbs.db
+
+# Éditeurs
+.vscode/
+.idea/
+
+# PHP / config sensible
+php/contact.php
+*.env
+*.log
+
+# Dépendances éventuelles
+node_modules/
