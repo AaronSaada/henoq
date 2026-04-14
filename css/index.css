@@ -202,7 +202,7 @@
 
 /* ══ POURQUOI HENOQ ══ */
 /* Augmente le padding-bottom sur les .lw des sec-title pour éviter la coupure des accents */
-.sec-title .lw { padding-bottom: .15em; }
+.sec-title .lw { overflow: visible; padding-bottom: .2em; }
 #why { background: var(--dark); }
 
 .why-grid {
@@ -543,14 +543,15 @@
 /* Gros chiffre — toujours en haut du texte */
 .audit-step-num-wrap {
   position: relative;
-  height: 5rem;
+  height: auto;
+  min-height: 5rem;
   width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   margin-bottom: .8rem;
   z-index: 2;
-  background: var(--offwhite);
+  background: transparent;
 }
 
 .audit-big-num {
@@ -581,7 +582,7 @@
   color: var(--dark);
   margin-bottom: .8rem;
 }
-.audit-step-title .lw { overflow: hidden; padding-bottom: .12em; }
+.audit-step-title .lw { overflow: visible; padding-bottom: .2em; }
 .audit-step-title .outline { color: transparent; -webkit-text-stroke: 1.5px var(--maroon); }
 
 .audit-step p {
