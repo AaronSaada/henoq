@@ -62,7 +62,7 @@ section { padding: 80px 0; }
   40%, 60% { transform: translateX(4px); }
 }
 
-.lw { display: block; overflow: hidden; padding-bottom: .05em; }
+.lw { display: block; overflow: hidden; padding-bottom: .12em; }
 
 .l {
   display: block;
