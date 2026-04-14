@@ -203,7 +203,7 @@
 /* ══ POURQUOI HENOQ ══ */
 /* Augmente le padding-bottom sur les .lw des sec-title pour éviter la coupure des accents */
 .sec-title .lw { overflow: visible; padding-bottom: .2em; }
-#why { background: var(--dark); }
+#why { background: #242424; }
 
 .why-grid {
   display: grid;
@@ -213,7 +213,7 @@
   position: relative;
 }
 .why-item {
-  background: var(--dark);
+  background: #242424;
   padding: 2.4rem 2rem;
   transition: background .4s;
   position: relative;

@@ -395,7 +395,7 @@
 /* ══════════════════════════════════════════
    FOOTER
 ══════════════════════════════════════════ */
-#footer { background: var(--dark); padding: 48px 0 32px; }
+#footer { background: #242424; padding: 48px 0 32px; }
 
 .footer-inner {
   display: grid;
