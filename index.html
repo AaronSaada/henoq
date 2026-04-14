@@ -246,7 +246,7 @@
           <div class="svc-item reveal" data-bg="#593137" data-accent="#F3EDDA">
             <a href="offres.html#cloud" class="svc-link" aria-label="Cloud & Outils Collaboratifs"></a>
             <div class="svc-body">
-              <h3 class="svc-title">Cloud<br><span class="svc-title-outline">&amp; Outils Collaboratifs</span></h3>
+              <h3 class="svc-title">Cloud<br><span class="svc-title-outline">&amp; Collaboration</span></h3>
               <p class="svc-hook">Migration, accès et collaboration unifiés.</p>
               <ul class="svc-tags">
                 <li>Microsoft 365</li><li>Google Workspace</li><li>Sauvegarde cloud</li><li>Gestion des accès</li><li>Migration</li>
@@ -426,47 +426,82 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════
-         CHIFFRES CLÉS
-    ══════════════════════════ -->
-    <section id="stats" aria-label="Chiffres clés">
-      <div class="stats-grid">
-        <div class="stat-item reveal">
-          <p class="stat-num"><span class="cnt" data-to="10">0</span>+</p>
-          <p class="stat-label">Ans d'expérience</p>
-        </div>
-        <div class="stat-item reveal reveal-d1">
-          <p class="stat-num">48<span style="font-size:.6em;font-weight:700">h</span></p>
-          <p class="stat-label">Délai d'intervention</p>
-        </div>
-        <div class="stat-item reveal reveal-d2">
-          <p class="stat-num"><span class="cnt" data-to="40">0</span>%</p>
-          <p class="stat-label">D'économies identifiées</p>
-        </div>
-        <div class="stat-item reveal reveal-d3">
-          <p class="stat-num">3</p>
-          <p class="stat-label">Experts dédiés</p>
-        </div>
-      </div>
-    </section>
 
     <!-- ══════════════════════════
-         TRUST BAND
+         AUDIT
     ══════════════════════════ -->
-    <section id="trust" aria-label="Technologies maîtrisées">
+    <section id="audit-section" aria-labelledby="audit-title">
       <div class="wrap">
-        <p class="trust-label reveal">Technologies maîtrisées</p>
-        <div class="trust-logos reveal reveal-d1" role="list">
-          <span class="trust-tag" role="listitem">Microsoft 365</span>
-          <span class="trust-tag" role="listitem">Azure</span>
-          <span class="trust-tag" role="listitem">Intune</span>
-          <span class="trust-tag" role="listitem">Defender</span>
-          <span class="trust-tag" role="listitem">VMware</span>
-          <span class="trust-tag" role="listitem">Debian</span>
-          <span class="trust-tag" role="listitem">GLPI</span>
-          <span class="trust-tag" role="listitem">n8n</span>
-          <span class="trust-tag" role="listitem">SharePoint</span>
-          <span class="trust-tag" role="listitem">Entra ID</span>
+        <p class="sec-eyebrow reveal">L'audit gratuit</p>
+        <h2 id="audit-title" class="sec-title reveal reveal-d1">
+          <span class="lw">VOTRE AUDIT</span>
+          <span class="lw outline">EN 4 ÉTAPES.</span>
+        </h2>
+
+        <div class="audit-flow">
+
+          <!-- Flèche zig-zag passant par chaque point -->
+          <div class="audit-line" aria-hidden="true">
+            <svg viewBox="0 0 1000 380" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Part du centre de 01 (haut ~x=125, y=80), descend vers 02 (bas ~x=375, y=300), remonte vers 03 (haut ~x=625, y=80), descend vers 04 (bas ~x=875, y=300) -->
+              <path d="M125 80 C200 80 300 300 375 300 C450 300 550 80 625 80 C700 80 800 300 875 300" stroke="rgba(89,49,55,0.2)" stroke-width="1.5" fill="none"/>
+              <!-- Flèche finale -->
+              <polyline points="862,288 875,300 862,312" stroke="rgba(89,49,55,0.2)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+          </div>
+
+          <div class="audit-step reveal">
+            <div class="audit-step-num-wrap">
+              <span class="audit-big-num">01</span>
+            </div>
+            <div class="audit-step-body">
+              <h3 class="audit-step-title">
+                <span class="lw">ÉTAT DES</span>
+                <span class="lw outline">LIEUX.</span>
+              </h3>
+              <p>Cartographie complète de votre infrastructure — matériel, logiciels, accès, sauvegardes.</p>
+            </div>
+          </div>
+
+          <div class="audit-step reveal reveal-d1">
+            <div class="audit-step-num-wrap">
+              <span class="audit-big-num">02</span>
+            </div>
+            <div class="audit-step-body">
+              <h3 class="audit-step-title">
+                <span class="lw">RISQUES</span>
+                <span class="lw outline">IDENTIFIÉS.</span>
+              </h3>
+              <p>Failles, licences inutilisées, points de défaillance — priorisés par impact.</p>
+            </div>
+          </div>
+
+          <div class="audit-step reveal reveal-d2">
+            <div class="audit-step-num-wrap">
+              <span class="audit-big-num">03</span>
+            </div>
+            <div class="audit-step-body">
+              <h3 class="audit-step-title">
+                <span class="lw">PLAN</span>
+                <span class="lw outline">CHIFFRÉ.</span>
+              </h3>
+              <p>Recommandations concrètes avec coût estimé pour chaque action.</p>
+            </div>
+          </div>
+
+          <div class="audit-step reveal reveal-d3">
+            <div class="audit-step-num-wrap">
+              <span class="audit-big-num">04</span>
+            </div>
+            <div class="audit-step-body">
+              <h3 class="audit-step-title">
+                <span class="lw">RAPPORT</span>
+                <span class="lw outline">REMIS.</span>
+              </h3>
+              <p>Un document structuré, lisible par tous. Pour vous, votre direction ou vos associés.</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

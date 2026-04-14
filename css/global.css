@@ -200,3 +200,18 @@ section { padding: 80px 0; }
   .wrap { max-width: 80vw; }
   .sec-title { font-size: clamp(3rem, 5vw, 5rem); }
 }
+
+/* ══ MOBILE ONLY ══ */
+@media (max-width: 768px) {
+  /* Boutons directement remplis — pas d'animation */
+  .btn-fill {
+    background: var(--maroon) !important;
+    color: var(--offwhite) !important;
+  }
+  .btn-fill::before { display: none; }
+
+  .btn-fill.light {
+    background: var(--offwhite) !important;
+    color: var(--maroon) !important;
+  }
+}
