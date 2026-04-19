@@ -257,7 +257,7 @@
 
 .why-item h3 {
   font-family: var(--condensed);
-  font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .3px;
@@ -274,6 +274,21 @@
   transition: color .4s;
 }
 .why-item:hover p { color: rgba(246,244,241,.7); }
+
+.why-more {
+  margin-top: 2.4rem;
+  text-align: center;
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.why-more a {
+  color: rgba(246,244,241,.5);
+  text-decoration: none;
+  transition: color .2s;
+}
+.why-more a:hover { color: var(--offwhite); }
 
 .why-tag {
   display: inline-block;
@@ -498,6 +513,7 @@
   margin-top: 4rem;
   position: relative;
   min-height: 380px;
+  overflow: hidden;
 }
 
 /* Flèche SVG zig-zag passant par chaque chiffre */
