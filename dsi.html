@@ -24,55 +24,24 @@
 <body>
 
   <!-- NAV -->
-  <nav id="nav" role="navigation" aria-label="Navigation principale">
-    <a href="index.html" class="nav-brand" aria-label="Henoq — accueil">
-      <img src="assets/images/logo.svg" alt="Henoq" class="nav-logo-img" onerror="this.src='assets/images/logo.png'" />
-      <span class="nav-wordmark">HENOQ</span>
-    </a>
-    <button id="burger" aria-label="Menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <ul id="nav-menu" role="list">
-      <li class="nav-item nav-item--dropdown">
-        <button class="nav-dropdown-trigger" aria-expanded="false">
-          Nos services
-          <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <ul class="nav-dropdown" role="list">
-          <li><a href="dsi.html"><span class="nav-drop-title">DSI externalisée</span><span class="nav-drop-sub">Votre DSI sans les coûts</span></a></li>
-          <li><a href="infogerance.html"><span class="nav-drop-title">Infogérance</span><span class="nav-drop-sub">Gestion complète de votre IT</span></a></li>
-          <li><a href="conseil-formation.html"><span class="nav-drop-title">Conseil & Formation</span><span class="nav-drop-sub">Stratégie IT & montée en compétences</span></a></li>
-          <li><a href="cybersecurite.html"><span class="nav-drop-title">Cybersécurité</span><span class="nav-drop-sub">Protection & conformité</span></a></li>
-          <li><a href="automatisation.html"><span class="nav-drop-title">Automatisation</span><span class="nav-drop-sub">Workflows & intégrations n8n</span></a></li>
-        </ul>
-      </li>
-      <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li>
-        <a href="contact.html" class="nav-cta">
-          Audit gratuit
-          <span class="nav-cta-badge">Offre jusqu'au 31 déc. 2026</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
+  <div id="nav-placeholder"></div>
 
   <main>
 
     <!-- ══ HERO ══ -->
     <section id="dsi-hero">
-      <div class="wrap">
+      <div class="dsi-hero-content">
         <p class="sec-eyebrow" style="--d:.3s;opacity:0;animation:fadeUp .6s ease both">DSI externalisée</p>
         <h1 class="dsi-hero-title">
           <span class="lw"><em class="l" style="--d:.4s">LES COMPÉTENCES</em></span>
           <span class="lw"><em class="l" style="--d:.55s">D'UN DSI SENIOR.</em></span>
-          <span class="lw"><em class="l outline" style="--d:.7s">SANS LE RECRUTEMENT.</em></span>
+          <span class="lw"><em class="l outline" style="--d:.7s">SANS CONTRAINTE.</em></span>
         </h1>
-        <p class="dsi-hero-sub" style="--d:1s;opacity:0;animation:fadeUp .65s ease both">
+        <p class="dsi-hero-sub" style="--d:1s">
           Un pilotage IT complet, réactif et prévisible — pour les TPE et PME qui ont besoin d'expertise sans les contraintes d'un poste à temps plein.
         </p>
-        <div style="--d:1.1s;opacity:0;animation:fadeUp .65s ease both;display:flex;gap:1.2rem;flex-wrap:wrap">
-          <a href="contact.html" class="btn-fill">DEMANDER MON AUDIT</a>
+        <div class="dsi-hero-btns" style="--d:1.1s">
+          <a href="index.html#contact" class="btn-fill">DEMANDER MON AUDIT</a>
           <a href="#dsi-cout" class="btn-text">Voir combien coûte un DSI interne →</a>
         </div>
       </div>
@@ -129,28 +98,63 @@
           </div>
         </div>
 
-        <div class="dsi-vs reveal">
-          <div class="dsi-vs-col dsi-vs-interne">
-            <p class="dsi-vs-label">DSI interne</p>
-            <ul>
-              <li>100–160k€/an coût total</li>
-              <li>Recrutement long et incertain</li>
-              <li>1 seul profil, périmètre limité</li>
-              <li>Absent = pas de couverture</li>
-              <li>Formation continue à votre charge</li>
-            </ul>
-          </div>
-          <div class="dsi-vs-separator">VS</div>
-          <div class="dsi-vs-col dsi-vs-henoq">
-            <p class="dsi-vs-label">Henoq</p>
-            <ul>
-              <li>Forfait mensuel fixe et prévisible</li>
-              <li>Opérationnel dès le premier mois</li>
-              <li>3 experts + réseau de partenaires</li>
-              <li>Continuité de service garantie</li>
-              <li>Veille technologique incluse</li>
-            </ul>
-          </div>
+        <div class="dsi-table-wrap reveal">
+          <table class="dsi-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="dsi-th">DSI interne<span>Recrutement classique</span></th>
+                <th class="dsi-th dsi-th--henoq">Henoq<span>DSI externalisée</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Coût annuel</td>
+                <td><span class="dot dot--red"></span></td>
+                <td><span class="dot dot--green"></span></td>
+              </tr>
+              <tr>
+                <td>Délai de mise en place</td>
+                <td><span class="dot dot--red"></span></td>
+                <td><span class="dot dot--green"></span></td>
+              </tr>
+              <tr>
+                <td>Couverture des compétences</td>
+                <td><span class="dot dot--orange"></span></td>
+                <td><span class="dot dot--green"></span></td>
+              </tr>
+              <tr>
+                <td>Continuité en cas d'absence</td>
+                <td><span class="dot dot--red"></span></td>
+                <td><span class="dot dot--green"></span></td>
+              </tr>
+              <tr>
+                <td>Coût prévisible</td>
+                <td><span class="dot dot--red"></span></td>
+                <td><span class="dot dot--green"></span></td>
+              </tr>
+              <tr>
+                <td>Veille technologique</td>
+                <td><span class="dot dot--orange"></span></td>
+                <td><span class="dot dot--green"></span></td>
+              </tr>
+              <tr>
+                <td>Scalabilité</td>
+                <td><span class="dot dot--red"></span></td>
+                <td><span class="dot dot--green"></span></td>
+              </tr>
+              <tr>
+                <td>Réseau de partenaires</td>
+                <td><span class="dot dot--red"></span></td>
+                <td><span class="dot dot--green"></span></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="dsi-table-legend">
+            <span><span class="dot dot--green"></span> Avantage</span>
+            <span><span class="dot dot--orange"></span> Neutre</span>
+            <span><span class="dot dot--red"></span> Inconvénient</span>
+          </p>
         </div>
       </div>
     </section>
@@ -228,7 +232,6 @@
         <p class="reveal reveal-d2">Un état des lieux complet de votre infrastructure. En 1h, vous avez une vision claire de vos forces, vos risques et vos priorités.</p>
         <div class="cta-btns reveal reveal-d3">
           <a href="contact.html" class="btn-fill light">DEMANDER MON AUDIT</a>
-          <a href="contact.html" class="btn-text" style="color:rgba(246,244,241,.6)">Nous contacter →</a>
         </div>
       </div>
     </section>

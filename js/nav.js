@@ -1,6 +1,20 @@
 'use strict';
 
-(function () {
+/* ── Chargement navbar centralisée ── */
+document.addEventListener('DOMContentLoaded', function () {
+  const placeholder = document.getElementById('nav-placeholder');
+  if (!placeholder) { initNav(); return; }
+
+  fetch('nav.html')
+    .then(r => r.text())
+    .then(html => {
+      placeholder.outerHTML = html;
+      initNav();
+    })
+    .catch(() => initNav());
+});
+
+function initNav() {
 
   /* ── Dropdown ── */
   const dropdowns = document.querySelectorAll('.nav-item--dropdown');
@@ -10,37 +24,18 @@
 
     let closeTimer = null;
 
-    const open = () => {
-      clearTimeout(closeTimer);
-      item.classList.add('open');
-    };
+    const open = () => { clearTimeout(closeTimer); item.classList.add('open'); };
+    const close = () => { closeTimer = setTimeout(() => item.classList.remove('open'), 150); };
 
-    const close = () => {
-      closeTimer = setTimeout(() => {
-        item.classList.remove('open');
-      }, 150);
-    };
+    item.addEventListener('mouseenter', () => { if (window.innerWidth >= 1100) open(); });
+    item.addEventListener('mouseleave', () => { if (window.innerWidth >= 1100) close(); });
 
-    // Desktop : hover sur l'item entier
-    item.addEventListener('mouseenter', () => {
-      if (window.innerWidth >= 1100) open();
-    });
-    item.addEventListener('mouseleave', () => {
-      if (window.innerWidth >= 1100) close();
-    });
-
-    // Annuler la fermeture si on revient sur le dropdown
     const dropdown = item.querySelector('.nav-dropdown');
     if (dropdown) {
-      dropdown.addEventListener('mouseenter', () => {
-        if (window.innerWidth >= 1100) clearTimeout(closeTimer);
-      });
-      dropdown.addEventListener('mouseleave', () => {
-        if (window.innerWidth >= 1100) close();
-      });
+      dropdown.addEventListener('mouseenter', () => { if (window.innerWidth >= 1100) clearTimeout(closeTimer); });
+      dropdown.addEventListener('mouseleave', () => { if (window.innerWidth >= 1100) close(); });
     }
 
-    // Mobile : click toggle
     trigger.addEventListener('click', () => {
       if (window.innerWidth < 1100) {
         const isOpen = item.classList.toggle('open');
@@ -49,6 +44,7 @@
     });
   });
 
+  /* ── Scroll → .solid ── */
   const nav = document.getElementById('nav');
   if (nav) {
     const onScroll = () => nav.classList.toggle('solid', window.scrollY > 40);
@@ -56,6 +52,7 @@
     onScroll();
   }
 
+  /* ── Burger ── */
   const burger = document.getElementById('burger');
   if (nav && burger) {
     burger.addEventListener('click', () => {
@@ -84,12 +81,13 @@
     });
   }
 
+  /* ── Active link ── */
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('#nav-menu a').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href && href === currentPage) link.classList.add('active');
+    if (link.getAttribute('href') === currentPage) link.classList.add('active');
   });
 
+  /* ── Reveal ── */
   const revealEls = document.querySelectorAll('.reveal');
   if (revealEls.length) {
     const observer = new IntersectionObserver(entries => {
@@ -103,6 +101,7 @@
     revealEls.forEach(el => observer.observe(el));
   }
 
+  /* ── BTT ── */
   const btt = document.getElementById('btt');
   if (btt) {
     window.addEventListener('scroll', () => {
@@ -111,7 +110,7 @@
     btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   }
 
+  /* ── Année ── */
   const yr = document.getElementById('yr');
   if (yr) yr.textContent = new Date().getFullYear();
-
-})();
+}

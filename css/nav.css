@@ -297,7 +297,7 @@
     padding: 24px 32px;
     gap: 1.4rem;
     align-items: flex-start;
-    border-top: 1px solid rgba(0,0,0,.08);
+    border-top: 1px solid rgba(89,49,55,.1);
     box-shadow: 0 8px 24px rgba(0,0,0,.15);
     clip-path: inset(0 0 100% 0);
     opacity: 0;
@@ -307,21 +307,21 @@
   }
   #nav.open #nav-menu { clip-path: inset(0 0 0% 0); opacity: 1; pointer-events: auto; }
 
-  /* Fond maroon quand nav non scrollée */
-  #nav:not(.solid) #nav-menu { background: var(--offwhite); border-top-color: rgba(89,49,55,.1); }
+  /* Nav non scrollée — fond offwhite, textes maroon */
+  #nav:not(.solid) #nav-menu { background: var(--offwhite); }
   #nav:not(.solid) #nav-menu a { color: var(--maroon) !important; }
   #nav:not(.solid) .nav-dropdown-trigger { color: var(--maroon) !important; }
   #nav:not(.solid) .nav-drop-title { color: var(--dark) !important; }
   #nav:not(.solid) .nav-drop-sub { color: rgba(47,47,47,.45) !important; }
   #nav:not(.solid) .nav-dropdown { border-top-color: rgba(89,49,55,.15) !important; }
-  #nav:not(.solid) .nav-cta { border-color: rgba(89,49,55,.5) !important; color: var(--maroon) !important; }
-  #nav:not(.solid) .nav-cta::before { background: var(--maroon) !important; }
-  #nav:not(.solid) .nav-cta:hover { color: var(--offwhite) !important; }
 
-  /* Fond offwhite quand nav scrollée */
+  /* Nav scrollée (.solid) — fond maroon, textes offwhite */
+  #nav.solid #nav-menu { background: var(--maroon); border-top-color: rgba(246,244,241,.1); }
   #nav.solid #nav-menu a { color: var(--offwhite) !important; opacity: .75; }
   #nav.solid .nav-dropdown-trigger { color: var(--offwhite) !important; }
   #nav.solid .nav-drop-title { color: var(--offwhite) !important; }
+  #nav.solid .nav-drop-sub { color: rgba(246,244,241,.5) !important; }
+  #nav.solid .nav-dropdown { border-top-color: rgba(246,244,241,.15) !important; }
   #nav.solid .nav-cta { border-color: rgba(246,244,241,.5) !important; color: var(--offwhite) !important; padding: 10px 20px !important; }
   #nav.solid .nav-cta::before { background: var(--offwhite) !important; }
   #nav.solid .nav-cta:hover { color: var(--maroon) !important; }
@@ -357,10 +357,18 @@
   .nav-item--dropdown.open .nav-dropdown { display: block; opacity: 1; pointer-events: auto; }
 
   .nav-dropdown li { display: block; width: 100%; }
-  .nav-dropdown li a { padding: 10px 0 !important; background: transparent !important; width: 100%; align-items: flex-start; }
+  .nav-dropdown li a {
+    padding: 10px 0 !important;
+    background: transparent !important;
+    width: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start;
+    gap: 2px;
+  }
   .nav-dropdown li a:hover { background: transparent !important; }
-  .nav-drop-title { font-size: .95rem; }
-  .nav-drop-sub { font-size: .75rem; }
+  .nav-drop-title { font-size: .95rem; display: block; }
+  .nav-drop-sub { font-size: .75rem; display: block; }
 }
 
 @media (min-width: 1100px) {
@@ -448,40 +456,4 @@
 @media (max-width: 600px) {
   .footer-inner { grid-template-columns: 1fr; gap: 1.8rem; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
-}
-
-/* ══ MOBILE ONLY ══ */
-@media (max-width: 1099px) {
-  /* Menu ouvert : fond maroon quand la nav est maroon (non solid) */
-  #nav:not(.solid).open #nav-menu {
-    background: var(--maroon);
-    box-shadow: 0 12px 32px rgba(0,0,0,.25);
-    border-top: 1px solid rgba(246,244,241,.1);
-  }
-  #nav:not(.solid).open #nav-menu a {
-    color: var(--offwhite) !important;
-    opacity: .75;
-  }
-  #nav:not(.solid).open #nav-menu a:hover { opacity: 1; }
-  #nav:not(.solid).open #nav-menu a:not(.nav-cta)::after {
-    background: var(--offwhite) !important;
-  }
-  #nav:not(.solid).open .nav-dropdown-trigger {
-    color: var(--offwhite) !important;
-  }
-  #nav:not(.solid).open .nav-cta {
-    border-color: rgba(246,244,241,.5) !important;
-    color: var(--offwhite) !important;
-  }
-  #nav:not(.solid).open .nav-cta::before {
-    background: var(--offwhite) !important;
-  }
-  #nav:not(.solid).open .nav-cta:hover {
-    color: var(--maroon) !important;
-  }
-
-  /* Drop shadow sur le menu ouvert (tous les cas) */
-  #nav.open #nav-menu {
-    box-shadow: 0 12px 32px rgba(0,0,0,.2);
-  }
 }
