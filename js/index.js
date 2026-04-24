@@ -19,11 +19,7 @@
 
     item.addEventListener('click', (e) => {
       if (!isMobile()) return;
-
-      // Si le clic vient de la flèche ou du lien arrow, laisser naviguer
       if (e.target.closest('.svc-arrow-link')) return;
-
-      // Sinon bloquer la navigation et toggler la carte
       e.preventDefault();
       const wasActive = item.dataset.open === 'true';
       document.querySelectorAll('.svc-item').forEach(el => {
@@ -60,6 +56,7 @@
     });
   });
 
+  /* ── Ticker ── */
   function initTicker() {
     const tickerTrack = document.getElementById('ticker-track');
     if (tickerTrack) {
@@ -87,6 +84,7 @@
     window.addEventListener('load', initTicker);
   }
 
+  /* ── Elevator ── */
   const elevator = document.getElementById('hero-elevator');
   if (elevator) {
     const items   = [...elevator.querySelectorAll('.hero-elevator-item')];
@@ -109,6 +107,7 @@
     }, INTERVAL);
   }
 
+  /* ── Compteurs ── */
   const counters = document.querySelectorAll('.cnt[data-to]');
   if (counters.length) {
     const animate = (el) => {
@@ -133,6 +132,92 @@
       });
     }, { threshold: 0.5 });
     counters.forEach(el => observer.observe(el));
+  }
+
+  /* ── Formulaire de contact ── */
+  const form = document.getElementById('cform');
+  if (form) {
+    const msgEl   = document.getElementById('cmsg');
+    const sendBtn = form.querySelector('.csend');
+    const RECAPTCHA_SITE_KEY = 'VOTRE_SITE_KEY';
+
+    form.querySelectorAll('.fr').forEach(fr => {
+      const span = document.createElement('span');
+      span.className = 'fr-err-msg';
+      span.setAttribute('role', 'alert');
+      span.setAttribute('aria-live', 'polite');
+      fr.appendChild(span);
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      clearErrors();
+
+      const name    = document.getElementById('fn');
+      const email   = document.getElementById('fe');
+      const service = document.getElementById('fs');
+      const msg     = document.getElementById('fm');
+      let ok = true;
+
+      if (!name.value.trim()) { markErr(name, 'Veuillez renseigner votre nom ou société.'); ok = false; }
+      else if (name.value.trim().length > 100) { markErr(name, 'Le nom ne peut pas dépasser 100 caractères.'); ok = false; }
+
+      if (!email.value.trim()) { markErr(email, 'Veuillez renseigner votre adresse email.'); ok = false; }
+      else if (!validEmail(email.value)) { markErr(email, 'Adresse email invalide.'); ok = false; }
+
+      if (!service.value) { markErr(service, 'Veuillez choisir un sujet.'); ok = false; }
+
+      if (!msg.value.trim()) { markErr(msg, 'Veuillez saisir votre message.'); ok = false; }
+      else if (msg.value.trim().length < 10) { markErr(msg, 'Message trop court (10 caractères minimum).'); ok = false; }
+      else if (msg.value.trim().length > 5000) { markErr(msg, 'Message trop long (5000 caractères maximum).'); ok = false; }
+
+      if (!ok) { const firstErr = form.querySelector('.err'); if (firstErr) firstErr.focus(); return; }
+
+      sendBtn.classList.add('loading');
+      sendBtn.disabled = true;
+
+      try {
+        const token = await grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'contact' });
+        const res = await fetch('contact.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name:            name.value.trim(),
+            email:           email.value.trim(),
+            service:         service ? service.value : '',
+            message:         msg.value.trim(),
+            website:         document.getElementById('fhp')?.value || '',
+            recaptcha_token: token
+          })
+        });
+        const data = await res.json();
+        if (data.success) { form.reset(); showMsg('✓ ' + data.message, true); }
+        else { showMsg('⚠ ' + data.message, false); }
+      } catch {
+        showMsg('Une erreur est survenue. Contactez-nous directement par email.', false);
+      } finally {
+        sendBtn.classList.remove('loading');
+        sendBtn.disabled = false;
+      }
+    });
+
+    function validEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) && v.length <= 254; }
+    function markErr(el, message) {
+      el.classList.add('err');
+      el.setAttribute('aria-invalid', 'true');
+      const span = el.closest('.fr')?.querySelector('.fr-err-msg');
+      if (span) { span.textContent = message; span.classList.add('visible'); }
+    }
+    function clearErrors() {
+      form.querySelectorAll('.err').forEach(el => { el.classList.remove('err'); el.removeAttribute('aria-invalid'); });
+      form.querySelectorAll('.fr-err-msg').forEach(span => { span.textContent = ''; span.classList.remove('visible'); });
+      msgEl.textContent = ''; msgEl.className = 'cmsg';
+    }
+    function showMsg(txt, success) {
+      msgEl.textContent = txt;
+      msgEl.className = 'cmsg ' + (success ? 'cmsg-ok' : 'cmsg-err');
+      setTimeout(() => { msgEl.textContent = ''; msgEl.className = 'cmsg'; }, 7000);
+    }
   }
 
 })();

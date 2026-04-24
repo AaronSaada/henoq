@@ -44,6 +44,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 
+  <!-- reCAPTCHA -->
+  <script src="https://www.google.com/recaptcha/api.js?render=VOTRE_SITE_KEY"></script>
+
   <!-- ── CSS ── -->
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/nav.css">
@@ -87,7 +90,7 @@
           <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <ul class="nav-dropdown" role="list">
-          <li><a href="dsi-externalisee.html">
+          <li><a href="dsi.html">
             <span class="nav-drop-title">DSI externalisée</span>
             <span class="nav-drop-sub">Votre DSI sans les coûts</span>
           </a></li>
@@ -111,9 +114,8 @@
       </li>
 
       <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
-      <li><a href="contact.html">Contact</a></li>
       <li>
-        <a href="contact.html" class="nav-cta">
+        <a href="index.html#contact" class="nav-cta">
           Audit gratuit
           <span class="nav-cta-badge">Offre jusqu'au 31 déc. 2026</span>
         </a>
@@ -232,7 +234,7 @@
 
         </div>
         <p class="why-more reveal">
-          <a href="dsi-externalisee.html">En savoir plus sur la DSI externalisée →</a>
+          <a href="dsi.html">En savoir plus sur la DSI externalisée →</a>
         </p>
       </div>
     </section>
@@ -370,7 +372,7 @@
           </div>
 
           <div class="svc-item reveal reveal-d2" data-bg="#593137" data-accent="#F3EDDA">
-            <a href="dsi-externalisee.html" class="svc-link" aria-label="Conseil & Pilotage IT"></a>
+            <a href="dsi.html" class="svc-link" aria-label="Conseil & Pilotage IT"></a>
             <div class="svc-body">
               <h3 class="svc-title">Conseil<br><span class="svc-title-outline">&amp; Pilotage IT</span></h3>
               <p class="svc-hook">Stratégie IT, pilotage et formation.</p>
@@ -397,7 +399,7 @@
               </div>
             </div>
             <div class="svc-mobile-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
-            <a href="dsi-externalisee.html" class="svc-arrow-link" aria-label="Voir la page">↗</a>
+            <a href="dsi.html" class="svc-arrow-link" aria-label="Voir la page">↗</a>
             <div class="svc-arrow">↗</div>
           </div>
 
@@ -477,7 +479,7 @@
 
         <p class="svc-more reveal">
           Vous ne trouvez pas ce dont vous avez besoin ?<br>
-          <a href="contact.html">Notre réseau de collaborateurs spécialisés peut répondre à vos besoins.</a>
+          <a href="index.html#contact">Notre réseau de collaborateurs spécialisés peut répondre à vos besoins.</a>
         </p>
       </div>
     </section>
@@ -563,20 +565,75 @@
     </section>
 
     <!-- ══════════════════════════
-         CTA FINAL
+         CONTACT
     ══════════════════════════ -->
-    <section id="cta-final" aria-labelledby="cta-title">
-      <div class="wrap">
-        <p class="sec-eyebrow light reveal">On commence ?</p>
-        <h2 id="cta-title" class="sec-title light reveal reveal-d1">
-          <span class="lw">VOTRE AUDIT</span>
-          <span class="lw outline light">VOUS ATTEND.</span>
-        </h2>
-        <p class="reveal reveal-d2">Un état des lieux complet de votre infrastructure. En 1h, vous avez une vision claire de vos forces, vos risques et vos priorités.</p>
-        <div class="cta-btns reveal reveal-d3">
-          <a href="audit.html" class="btn-fill light">DEMANDER MON AUDIT</a>
-          <a href="contact.html" class="btn-text" style="color:rgba(246,244,241,.6)">Nous contacter →</a>
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-wrap">
+
+        <div class="contact-left reveal">
+          <p class="sec-eyebrow light">Parlons-nous</p>
+          <h2 id="contact-title" class="sec-title light reveal reveal-d1">
+            <span class="lw">NOUS</span>
+            <span class="lw outline light">CONTACTER.</span>
+          </h2>
+          <p class="contact-sub">Un projet ? Une urgence ? Nous répondons sous 48h ouvrées.</p>
+          <div class="cdetails">
+            <div class="cd">
+              <div><strong>Email</strong><a href="mailto:contact@henoq.fr">contact@henoq.fr</a></div>
+            </div>
+            <div class="cd">
+              <div><strong>Zone</strong><em>Île-de-France & remote</em></div>
+            </div>
+            <div class="cd">
+              <div><strong>Réponse</strong><em>Sous 48h ouvrées</em></div>
+            </div>
+          </div>
+          <div class="audit-cta">
+            <p class="audit-tag">Offre de lancement</p>
+            <p class="audit-name">Audit IT Gratuit</p>
+            <p class="audit-desc">État des lieux complet de votre infrastructure, sans engagement. Jusqu'au 31 déc. 2026.</p>
+          </div>
         </div>
+
+        <form id="cform" novalidate class="reveal reveal-d2">
+          <div class="fr">
+            <label for="fn">Nom / Société *</label>
+            <input id="fn" name="name" type="text" placeholder="Votre nom ou société" required>
+          </div>
+          <div class="fr">
+            <label for="fe">Email *</label>
+            <input id="fe" name="email" type="email" placeholder="votre@email.fr" required>
+          </div>
+          <div class="fr">
+            <label for="fs">Sujet</label>
+            <select id="fs" name="subject">
+              <option value="">Choisissez un sujet</option>
+              <option>Audit IT gratuit</option>
+              <option>DSI externalisée</option>
+              <option>Cloud & Microsoft 365</option>
+              <option>Cybersécurité</option>
+              <option>Infogérance</option>
+              <option>Automatisation</option>
+              <option>Autre demande</option>
+            </select>
+          </div>
+          <div class="fr">
+            <label for="fm">Message *</label>
+            <textarea id="fm" name="message" rows="5" placeholder="Décrivez votre besoin..." required></textarea>
+          </div>
+          <input type="text" id="fhp" name="website" autocomplete="off" tabindex="-1" aria-hidden="true" style="display:none">
+          <button type="submit" class="csend">
+            <span class="csend-txt">ENVOYER</span>
+            <span class="csend-spin"></span>
+          </button>
+          <p class="recaptcha-notice">
+            Ce site est protégé par reCAPTCHA —
+            <a href="https://policies.google.com/privacy" target="_blank">Confidentialité</a> &
+            <a href="https://policies.google.com/terms" target="_blank">Conditions</a>
+          </p>
+          <p class="cmsg" id="cmsg" role="alert"></p>
+        </form>
+
       </div>
     </section>
 
@@ -603,8 +660,7 @@
           <ul class="footer-links" role="list">
             <li><a href="offres.html">Nos offres</a></li>
             <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+                </ul>
         </nav>
 
         <nav aria-label="Nos offres" class="reveal reveal-d2">
