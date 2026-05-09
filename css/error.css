@@ -1,0 +1,61 @@
+/* ============================================================
+   HENOQ — error.css — pages d'erreur
+============================================================ */
+
+body.error-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body.error-body main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 36px 80px;
+}
+
+.error-code {
+  font-family: var(--condensed);
+  font-size: clamp(7rem, 22vw, 15rem);
+  font-weight: 900;
+  line-height: .85;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(89,49,55,.12);
+  user-select: none;
+  margin-bottom: 1.5rem;
+}
+
+.error-title {
+  font-family: var(--condensed);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--dark);
+  margin-bottom: .8rem;
+}
+
+.error-sub {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(47,47,47,.55);
+  max-width: 40ch;
+  margin: 0 auto 2.5rem;
+}
+
+.error-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  body.error-body main { padding: 100px 24px 60px; }
+  .error-actions { flex-direction: column; align-items: stretch; }
+  .error-actions .btn-fill { text-align: center; }
+}

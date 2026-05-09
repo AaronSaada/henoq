@@ -1,17 +1,19 @@
 'use strict';
 
-/* ── Chargement navbar centralisée ── */
+/* ── Chargement navbar et footer centralisés ── */
 document.addEventListener('DOMContentLoaded', function () {
-  const placeholder = document.getElementById('nav-placeholder');
-  if (!placeholder) { initNav(); return; }
+  const navPlaceholder    = document.getElementById('nav-placeholder');
+  const footerPlaceholder = document.getElementById('footer-placeholder');
 
-  fetch('nav.html')
-    .then(r => r.text())
-    .then(html => {
-      placeholder.outerHTML = html;
-      initNav();
-    })
-    .catch(() => initNav());
+  const navReady = navPlaceholder
+    ? fetch('nav.html').then(r => r.text()).then(html => { navPlaceholder.outerHTML = html; }).catch(() => {})
+    : Promise.resolve();
+
+  const footerReady = footerPlaceholder
+    ? fetch('footer.html').then(r => r.text()).then(html => { footerPlaceholder.outerHTML = html; }).catch(() => {})
+    : Promise.resolve();
+
+  Promise.all([navReady, footerReady]).then(() => initNav()).catch(() => initNav());
 });
 
 function initNav() {

@@ -1,0 +1,135 @@
+/* ============================================================
+   HENOQ — qui-sommes-nous.css
+============================================================ */
+
+/* ══ MISSION ══ */
+#qsn-mission {
+  padding: 100px 0;
+  background: var(--offwhite);
+  border-top: 1px solid var(--border);
+}
+
+.qsn-mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+.qsn-mission-left h2 { margin-bottom: 0; }
+
+.qsn-mission-right p {
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(47,47,47,.7);
+  margin-bottom: 1.2rem;
+}
+.qsn-mission-right p:last-child { margin-bottom: 0; }
+
+/* ══ VALEURS ══ */
+#qsn-valeurs {
+  background: #242424;
+  padding: 100px 0;
+}
+
+.qsn-valeurs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(246,244,241,.08);
+  margin-top: 3rem;
+}
+
+.qsn-valeur {
+  background: #242424;
+  padding: 2.4rem 2rem;
+}
+
+.qsn-valeur-num {
+  font-family: var(--condensed);
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: rgba(89,49,55,.3);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.qsn-valeur h3 {
+  font-family: var(--condensed);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--offwhite);
+  margin-bottom: .6rem;
+}
+
+.qsn-valeur p {
+  font-size: .88rem;
+  font-weight: 300;
+  line-height: 1.65;
+  color: rgba(246,244,241,.45);
+}
+
+/* ══ APPROCHE ══ */
+#qsn-approche {
+  padding: 100px 0;
+  background: var(--offwhite);
+}
+
+.qsn-approche-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-top: 3rem;
+}
+
+.qsn-approche-item {
+  background: var(--offwhite);
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  align-items: start;
+  gap: 2rem;
+  padding: 2.4rem;
+  transition: background .2s;
+}
+.qsn-approche-item:hover { background: rgba(89,49,55,.03); }
+
+.qsn-approche-num {
+  font-family: var(--condensed);
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: rgba(89,49,55,.15);
+  line-height: 1;
+  padding-top: .2rem;
+}
+
+.qsn-approche-body h3 {
+  font-family: var(--condensed);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--dark);
+  margin-bottom: .5rem;
+}
+
+.qsn-approche-body p {
+  font-size: .9rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(47,47,47,.6);
+}
+
+/* ══ RESPONSIVE ══ */
+@media (max-width: 900px) {
+  .qsn-mission-grid  { grid-template-columns: 1fr; gap: 2.5rem; }
+  .qsn-valeurs-grid  { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .qsn-valeurs-grid  { grid-template-columns: 1fr; }
+  .qsn-approche-item { grid-template-columns: 1fr; gap: .5rem; }
+  .qsn-approche-num  { font-size: 1.8rem; }
+}

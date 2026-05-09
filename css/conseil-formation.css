@@ -1,0 +1,53 @@
+/* ============================================================
+   HENOQ — conseil-formation.css
+============================================================ */
+
+/* ══ FORMATIONS ══ */
+#cf-formations {
+  padding: 100px 0;
+  background: var(--offwhite);
+}
+
+.cf-formations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.cf-formation {
+  border: 1px solid var(--border);
+  padding: 2.4rem;
+}
+
+.cf-formation-badge {
+  display: inline-block;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--maroon);
+  border: 1px solid rgba(89,49,55,.3);
+  padding: .2rem .7rem;
+  margin-bottom: 1rem;
+}
+
+.cf-formation h3 {
+  font-family: var(--condensed);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--dark);
+  margin-bottom: .6rem;
+}
+
+.cf-formation p {
+  font-size: .9rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(47,47,47,.6);
+}
+
+@media (max-width: 768px) {
+  .cf-formations-grid { grid-template-columns: 1fr; }
+}
